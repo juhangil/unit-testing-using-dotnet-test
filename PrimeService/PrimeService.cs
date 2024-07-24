@@ -6,6 +6,9 @@ namespace Prime.Services
     {
         public bool IsPrime(int candidate)
         {
+            if (candidate < 2)
+                return false;
+
             if ((candidate & 1) != 0)
             {
                 int limit = (int)Math.Sqrt(candidate);
